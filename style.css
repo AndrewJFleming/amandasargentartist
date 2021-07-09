@@ -1,0 +1,858 @@
+/**
+Theme Name: Amanda Sargent Website
+Author: AJF
+Description: Custom Theme for Amanda Sargent's Artist Website
+Version: 3.3
+**/
+
+body {
+  background-color: #e4e3e1;
+  /* Mobile menu overlay full screen  */
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  position: relative;
+  padding-top: 42px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Noto Serif', serif;
+}
+
+p {
+  color: #1e1c20;
+}
+
+#mobileOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+/* Keep footer at bottom of page */
+.page-wrap {
+  padding: 0;
+  min-height: 100vh;
+}
+
+.page-title {
+  color: #1e1c20;
+  margin-top: 4vh;
+  margin-bottom: 3vh!important;
+  text-align: center;
+}
+
+.painting-page-title {
+  color: #1e1c20;
+  margin-top: 3vh;
+}
+
+/* Header */
+
+header {
+  background-color: #1e1c20;
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  z-index: 100!important;
+}
+
+header .top-bar {
+  background-color: #1e1c20;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  line-height: 35px;
+  display: flex;
+  height: 35px;
+}
+
+header .header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header .top-bar li a {
+  padding: 0px 10px;
+  color: #d4d7dd;
+  line-height: 35px;
+}
+
+header .top-bar li {
+  position: relative;
+  padding: 0;
+}
+
+header .top-bar > .menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
+
+/* Submenus */
+/* Submenu Level One */
+header .top-bar li .sub-menu {
+  background-color: #657a73;
+  position: absolute;
+  display: none;
+  z-index: 999;
+  top: 100%;
+  top: 35px;
+  left: 0px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  width: 100px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+header .top-bar li .sub-menu a {
+  color: #d4d7dd;
+  display: block;
+  text-decoration: none;
+  line-height: 1.2;
+  padding: 8px 10px;
+}
+
+header .top-bar li .sub-menu a:hover {
+  text-decoration: underline;
+}
+
+
+header .top-bar > .menu-item-has-children .sub-menu > .menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
+
+/* Submenu Level Two */
+header .top-bar .sub-menu li .sub-menu {
+  top: 0;
+  left: 100px;
+  background-color: #86382a;
+  border-top: none;
+}
+
+header .top-bar .sub-menu li .sub-menu a {
+  color: #d4d7dd;
+}
+
+header .top-bar .sub-menu li .sub-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Showcase */
+
+.showcase{
+  height: 80vh;
+}
+
+.showcase-container {
+  padding-top: 35px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1170px;
+}
+
+/* Page Styles */
+
+.page-nav {
+  text-align: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.page-nav a {
+  color: #1e1c20;
+}
+
+/* Gallery Cards */
+
+.thumb-container {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
+.thumb-container img {
+  max-height: 280px;
+  border-radius: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Single-Post Page  */
+
+.content-column {
+  background-color: #fff;
+  padding: 15px 15px 25px 15px;
+  border-radius: 2px;
+}
+
+.containerIntro p,
+.containerIntro h5 {
+  display: inline!important;
+  vertical-align: top!important;
+}
+
+.category-labels {
+  list-style: none;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  margin: 0px!important;
+}
+
+.category-labels p{
+  display: inline-block;
+  background-color: #657a73;
+  color:#f8f5e4;
+  padding: 3px 7px;
+  margin-right: 5px;
+  border-radius: 15px;
+}
+
+.single-painting-wrap {
+  margin-top: 30px;
+}
+
+/* Style the Image Used to Trigger the Modal */
+.myImg-container {
+  text-align: center;
+}
+
+#myImg {
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0;
+  border-radius: 0;
+  max-height: 70vh!important;
+}
+
+#myImg:hover {
+  opacity: 0.8;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 850px;
+  border-radius: 0;
+}
+
+#modalOverlay {
+  position: absolute;
+  top: 0px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Caption of Modal Image - Same Width as the Image */
+#caption {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 45px;
+  margin-bottom: 105px;
+}
+
+/* Animation - Fade in the Modal */
+.modal-content, #caption {
+  animation-name: fade-in;
+  animation-duration: 0.6s;
+}
+
+@keyframes fade-in {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+/* END Animation */
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 50px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* END Close Button */
+
+/* About Page */
+
+.floatImg-wrapper {
+  float: right;
+  margin: 0 0 20px 20px;
+  max-width: 250px;
+}
+
+.floatImg {
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile Menu */
+
+#menu-icon {
+  color:#f8f5e4;
+  font-size: 28px;
+  padding: 1.2rem 0.5rem;
+  display: none;
+}
+
+#logo {
+  display: flex;
+}
+
+#logo p {
+  font-family: 'Noto Serif', serif;
+  color: #ebeef3;
+  font-size: 22px;
+  margin: 0;
+}
+
+#logo a {
+  text-decoration: none;
+}
+
+/* Slideout Menu */
+
+#slideout-menu {
+  background: #eae9e9;
+  z-index: 100;
+  position: absolute;
+  top: 36px;
+  display: none;
+  opacity: 0;
+  pointer-events:none;
+  border-bottom-right-radius: 5px;
+  transition: 0.4s;
+}
+
+#slideout-menu ul {
+  list-style: none;
+}
+
+#slideout-menu ul li {
+  padding: 4px 12px 4px 4px;
+}
+
+#slideout-menu a {
+  color: #1e1c20;
+}
+
+/* Enquiry Widget */
+
+.enquiry-column {
+  margin: 0;
+  padding: 0;
+}
+
+.enquiry .widget {
+  list-style: none;
+}
+
+#enquiryDivider {
+  border-top: 1px solid#ebeef3;
+  margin: 15px 0 20px;
+}
+
+.enquiry .label {
+  display: flex;
+  flex-direction: row;
+}
+
+.enquiry .required-style {
+  color: #be8479;
+  font-style: italic;
+}
+
+.enquiry label,
+.enquiry label .wpcf7-form-control-wrap {
+  width: 100%;
+  color: #ebeef3;
+}
+
+.enquiry {
+  background-color: #1e1c20;
+  color: #ebeef3;
+  padding: 15px 20px 5px;
+  margin-top: 15px;
+  margin-left: 30px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.enquiry p {
+  color: #ebeef3;
+}
+
+.enquiry .wpcf7 input,
+.enquiry .wpcf7 textarea {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 16px;
+  height: 42px;
+  width: 100%;
+  border: 1px 1px solid #0f0f0f;
+  background-color: #ebeef3;
+}
+
+.enquiry .wpcf7 textarea {
+  height: 150px;
+  width: 100%;
+}
+
+.enquiry .wpcf7-submit {
+  width: auto!important;
+  padding: 0 15px;
+  color: #1e1c20;
+  background-color: #ebeef3;
+}
+
+/* Contact Page Form */
+
+.contact .wpcf7 input,
+.contact .wpcf7 textarea {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 16px;
+  height: 42px;
+  width: 500px;
+  border: 1px 1px solid #0f0f0f;
+}
+
+.contact .wpcf7 textarea {
+  height: 100px;
+}
+
+.contact .wpcf7-submit {
+  width: auto!important;
+}
+
+/* Footer */
+
+footer {
+  background-color: #657a73;
+  margin-top: 100px;
+  padding: 8px;
+  display: block;
+  width: 100%;
+}
+
+footer h3 {
+  color: rgb(245, 240, 212, 0.8);
+  color: #eae9e9;
+}
+
+footer p,
+footer a {
+  color:#f6f6f6;
+}
+
+footer a:hover {
+  color:#d4caca;
+}
+
+footer .left-footer {
+  border-right: 1px solid #f6f6f6;
+  font-weight: 500!important;
+  margin: 8px 0;
+  padding: 0 8px;
+  text-align: center;
+}
+
+footer .left-footer ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;
+}
+
+.menu-footer-menu-container {
+  margin-top: 15px;
+}
+
+footer .right-footer {
+  flex: 2;
+  margin: 8px 0;
+  padding: 0 8px;
+  text-align: center;
+}
+
+footer #social-media-footer a {
+  color: #f6f6f6;
+  transition: 0.4s;
+}
+
+footer #social-media-footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+footer #social-media-footer ul li {
+  font-size: 48px;
+  padding: 0 16px;
+  transition: 0.4s;
+}
+
+footer #social-media-footer ul li:hover a {
+  color:#d4caca;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1199px) {
+
+  .showcase{
+    height: 65vh;
+  }
+
+  .showcase-container {
+    width: 970px;
+  }
+
+  /* Contact Form */
+  .contact .wpcf7 input,
+  .contact .wpcf7 textarea {
+    width: 400px;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+  /* Showcase */
+
+  .showcase{
+    height: 65vh;
+  }
+
+  .showcase-container {
+    width: 750px;
+  }
+
+  /* Enquiry Form */
+
+  .enquiry {
+    margin-left: 0;
+    padding: 20px 40px;
+  }
+
+  /* About Page */
+
+  .floatImg-wrapper {
+    float: right;
+    margin: 0 0 20px 20px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  /* Showcase */
+  .showcase{
+    width: 100%!important;
+  }
+
+  .showcase-container {
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+    margin-right: 0px!important;
+    margin-left: 0px!important;
+    width: 100%!important;
+  }
+
+  /* Modal */
+  /* 100% Image Width on Smaller Screens */
+  .modal-content {
+    width: 90%;
+  }
+
+  /* Enquiry */
+
+  .enquiry .wpcf7 input,
+  .enquiry .wpcf7 textarea {
+    width: 100%;
+  }
+
+  /* About Page */
+
+  .floatImg-wrapper {
+    margin: 0 0 20px 20px;
+  }
+
+  /* Contact Page Form */
+
+  .contact .wpcf7 input,
+  .contact .wpcf7 textarea {
+    width: 510px;
+  }
+  
+  .contact-image {
+    display: none;
+  }
+  
+  .contact .wpcf7-form p label {
+    text-align: left;
+  }
+
+}
+
+@media only screen and (max-width: 575px) {
+
+  /* Page Styles */
+
+  .page-wrap {
+    padding: 0 20px;
+  }
+
+  .page-title {
+    margin-top: 6vh;
+    margin-bottom: 15px!important;
+    color: #1e1c20;
+  }
+
+  /* Header */
+
+  header {
+    height: 67px;
+  }
+
+  header .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 67px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  header .menu-top-menu-container {
+    display: none;
+  }
+
+  #menu-icon {
+    display: flex;
+  }
+  
+  #slideout-menu {
+    top: 67px;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  #slideout-menu .sub-menu {
+    padding-left: 15px!important;
+  }
+
+  .top-bar {
+    margin: 15px 0px 20px 20px;
+    padding: 0;
+  }
+
+  .top-bar li a {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .top-bar li ul li a  {
+    text-transform: initial;
+  }
+
+  .top-bar li ul li ul li a  {
+    font-weight: normal;
+  }
+
+  /* Showcase */
+
+  .showcase{
+    top: 50px;
+    height: 50vh;
+  }
+
+  /* Gallery Cards Mobile */
+
+  .thumb-container {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .thumb-container img {
+    max-height: 500px;
+    max-width: 300px;
+  }
+
+  /* single-paintings.php */
+
+  .content-column {
+    margin-top: 15px;
+  }
+
+  .modal {
+    padding-top: 120px; /* Location of the box */
+  }
+  
+  .close {
+    top: 70px;
+  }
+
+  /* Enquiry */
+
+  .enquiry {
+    padding: 15px 20px;
+  }
+
+  /* Contact Page Form */
+
+  .contact {
+    text-align: center;
+  }
+
+  .contact .wpcf7 input,
+  .contact .wpcf7 textarea {
+    width: 350px;
+  }
+
+  /* About Page */
+
+  .floatImg-wrapper {
+    float: left;
+    margin: 0 20px 10px 0;
+    max-width: 190px;
+  }
+
+  /* Footer */
+
+  footer .left-footer {
+    border-right: hidden;
+    margin: 0;
+    padding: 16px 0 0 0;
+    text-align: center;
+  }
+
+  footer {
+    margin-top: 75px;
+    padding: 0;
+  }
+
+  footer .right-footer {
+    margin: 0;
+    padding: 8px 0 0 0;
+  }
+
+  footer .right-footer ul,
+  footer .right-footer h3 {
+    margin-bottom: 0;
+  }
+
+  .right-footer h3,
+  #social-media-footer {
+    display: none;
+  }
+
+  .copyright {
+    margin: 0;
+    padding: 16px 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .copyright p {
+    margin: 0;
+  }
+
+}
+
+@media only screen and (max-width: 390px) {
+
+  .page-wrap {
+    padding: 0 10px;
+  }
+
+  /* Gallery Cards Mobile */
+
+  .thumb-container {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .thumb-container img {
+    max-height: 400px;
+    max-width: 250px;
+  }
+
+  /* About Page */
+
+  .floatImg-wrapper {
+    background-color: rgb(255, 255, 255, .25);
+    float: none;
+    text-align: center;
+    max-width: 350px;
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .floatImg {
+    max-width: 250px;
+  }
+
+  /* Contact Page Form */
+
+  .contact .wpcf7 input,
+  .contact .wpcf7 textarea {
+    max-width: 250px!important;
+  }
+
+}

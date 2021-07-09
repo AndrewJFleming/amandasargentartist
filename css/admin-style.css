@@ -1,0 +1,22 @@
+/* Custom color for Frequently used Dashboard Icons */
+.wp-menu-image.dashicons-before.dashicons-admin-page:before {
+    color: rgb(179, 177, 109) !important;
+}
+
+.wp-menu-image.dashicons-before.dashicons-art:before,
+.wp-menu-image.dashicons-before.dashicons-admin-appearance:before {
+    color: rgb(212, 209, 27) !important;
+}
+
+/* Custom color for Frequently used subsection menu items
+Targets menu items within Paintings subsection */
+#menu-posts-paintings ul > li:nth-child(2) a,
+#menu-posts-paintings ul > li:nth-child(4) a {
+    color: rgb(212, 209, 27) !important;
+}
+
+/* Targets menu items within Appearance subsection */
+#menu-appearance ul > li:nth-child(3) a,
+#menu-appearance ul > li:nth-child(5) a {
+    color: rgb(212, 209, 27) !important;
+}
