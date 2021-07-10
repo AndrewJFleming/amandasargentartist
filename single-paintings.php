@@ -10,7 +10,7 @@
                 <!-- Content Column -->
                 <div class="col-lg-8 content-column">
 
-                    <!-- Trigger the Modal -->
+                    <!-- Featured Image and Painting info -->
                     <?php if(has_post_thumbnail()):?>
                         <div class="myImg-container">
                             <img id="myImg" src="<?php the_post_thumbnail_url('');?>" alt="<?php the_title();?>" class="img-fluid img-thumbnail">
@@ -33,36 +33,23 @@
                             } } ?>
                         </div>
 
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
-                            <!-- The Close Button -->
-                            <span class="close">&times;</span>
-                            <!-- Modal Content (The Image) -->
-                            <img class="modal-content" id="img01">
-                            <!-- Modal Caption (Image Text) -->
-                            <div id="caption"></div>
-                            <!-- Modal Overlay -->
-                            <div id="modalOverlay"></div>
-                        </div>
+                    <?php endif;?>
+                    <!-- END Featured Image and Painting info -->
+                    <?php get_template_part('includes/section', 'paintings'); ?>
 
-                        <?php endif;?>
-                        <!-- END Trigger the Modal -->
-
-                        <?php get_template_part('includes/section', 'paintings'); ?>
-
-                    </div>
-                        
-                    <!-- Enquiry Column -->
-                    <div class="col-lg-4 enquiry-column">
-
-                        <!-- Enquiry Form -->
-                        <div class="enquiry">
-                            <?php if(is_active_sidebar('enquiry-form') ):?>
-                                <?php dynamic_sidebar('enquiry-form');?>
-                            <?php endif;?> 
-                        </div>
-                    </div>
                 </div><!-- END Content Column -->
+
+                <!-- Enquiry Column -->
+                <div class="col-lg-4 enquiry-column">
+
+                    <!-- Enquiry Form -->
+                    <div class="enquiry">
+                        <?php if(is_active_sidebar('enquiry-form') ):?>
+                            <?php dynamic_sidebar('enquiry-form');?>
+                        <?php endif;?> 
+                    </div>
+
+                </div><!-- END Enquiry Column -->
 
             </div><!-- END First Row -->
             
