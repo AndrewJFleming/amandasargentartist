@@ -16,6 +16,8 @@ Custom WP theme designed for Amanda Sargent's artist portfolio.
 
 - [Andrew J Fleming](http://andrewjfleming.com/)
 
+<div align="center">
   <a href="http://andrewjfleming.com/">
-    <img align="center" src="images/ajf-logo-white.png" alt="AJF Logo" height="80">
+    <img src="images/ajf-logo-white.png" alt="AJF Logo" height="80">
   </a>
+</div>
