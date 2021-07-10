@@ -18,7 +18,10 @@ body {
   padding-top: 42px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Noto Serif', serif;
 }
 
@@ -48,7 +51,7 @@ p {
 .page-title {
   color: #1e1c20;
   margin-top: 4vh;
-  margin-bottom: 3vh!important;
+  margin-bottom: 3vh !important;
   text-align: center;
 }
 
@@ -64,7 +67,7 @@ header {
   position: absolute;
   height: 35px;
   width: 100%;
-  z-index: 100!important;
+  z-index: 100 !important;
 }
 
 header .top-bar {
@@ -99,7 +102,7 @@ header .top-bar li {
   padding: 0;
 }
 
-header .top-bar > .menu-item-has-children:hover > .sub-menu {
+header .top-bar>.menu-item-has-children:hover>.sub-menu {
   display: block;
 }
 
@@ -134,7 +137,7 @@ header .top-bar li .sub-menu a:hover {
 }
 
 
-header .top-bar > .menu-item-has-children .sub-menu > .menu-item-has-children:hover > .sub-menu {
+header .top-bar>.menu-item-has-children .sub-menu>.menu-item-has-children:hover>.sub-menu {
   display: block;
 }
 
@@ -156,7 +159,7 @@ header .top-bar .sub-menu li .sub-menu a:hover {
 
 /* Showcase */
 
-.showcase{
+.showcase {
   height: 80vh;
 }
 
@@ -208,21 +211,21 @@ header .top-bar .sub-menu li .sub-menu a:hover {
 
 .containerIntro p,
 .containerIntro h5 {
-  display: inline!important;
-  vertical-align: top!important;
+  display: inline !important;
+  vertical-align: top !important;
 }
 
 .category-labels {
   list-style: none;
   font-weight: lighter;
   font-size: 0.8rem;
-  margin: 0px!important;
+  margin: 0px !important;
 }
 
-.category-labels p{
+.category-labels p {
   display: inline-block;
   background-color: #657a73;
-  color:#f8f5e4;
+  color: #f8f5e4;
   padding: 3px 7px;
   margin-right: 5px;
   border-radius: 15px;
@@ -232,99 +235,15 @@ header .top-bar .sub-menu li .sub-menu a:hover {
   margin-top: 30px;
 }
 
-/* Style the Image Used to Trigger the Modal */
+/* Style the Paintings Featured Image */
 .myImg-container {
   text-align: center;
 }
 
 #myImg {
-  cursor: pointer;
-  transition: 0.3s;
   padding: 0;
   border-radius: 0;
-  max-height: 70vh!important;
 }
-
-#myImg:hover {
-  opacity: 0.8;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; /* Enable scroll if needed */
-}
-
-/* Modal Content (Image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 850px;
-  border-radius: 0;
-}
-
-#modalOverlay {
-  position: absolute;
-  top: 0px;
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-/* Caption of Modal Image - Same Width as the Image */
-#caption {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 45px;
-  margin-bottom: 105px;
-}
-
-/* Animation - Fade in the Modal */
-.modal-content, #caption {
-  animation-name: fade-in;
-  animation-duration: 0.6s;
-}
-
-@keyframes fade-in {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-/* END Animation */
-
-/* Close Button */
-.close {
-  position: absolute;
-  top: 50px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* END Close Button */
 
 /* About Page */
 
@@ -342,7 +261,7 @@ header .top-bar .sub-menu li .sub-menu a:hover {
 /* Mobile Menu */
 
 #menu-icon {
-  color:#f8f5e4;
+  color: #f8f5e4;
   font-size: 28px;
   padding: 1.2rem 0.5rem;
   display: none;
@@ -372,7 +291,7 @@ header .top-bar .sub-menu li .sub-menu a:hover {
   top: 36px;
   display: none;
   opacity: 0;
-  pointer-events:none;
+  pointer-events: none;
   border-bottom-right-radius: 5px;
   transition: 0.4s;
 }
@@ -452,7 +371,7 @@ header .top-bar .sub-menu li .sub-menu a:hover {
 }
 
 .enquiry .wpcf7-submit {
-  width: auto!important;
+  width: auto !important;
   padding: 0 15px;
   color: #1e1c20;
   background-color: #ebeef3;
@@ -475,7 +394,7 @@ header .top-bar .sub-menu li .sub-menu a:hover {
 }
 
 .contact .wpcf7-submit {
-  width: auto!important;
+  width: auto !important;
 }
 
 /* Footer */
@@ -495,16 +414,16 @@ footer h3 {
 
 footer p,
 footer a {
-  color:#f6f6f6;
+  color: #f6f6f6;
 }
 
 footer a:hover {
-  color:#d4caca;
+  color: #d4caca;
 }
 
 footer .left-footer {
   border-right: 1px solid #f6f6f6;
-  font-weight: 500!important;
+  font-weight: 500 !important;
   margin: 8px 0;
   padding: 0 8px;
   text-align: center;
@@ -546,14 +465,14 @@ footer #social-media-footer ul li {
 }
 
 footer #social-media-footer ul li:hover a {
-  color:#d4caca;
+  color: #d4caca;
 }
 
 /* Media Queries */
 
 @media only screen and (max-width: 1199px) {
 
-  .showcase{
+  .showcase {
     height: 65vh;
   }
 
@@ -573,7 +492,7 @@ footer #social-media-footer ul li:hover a {
 
   /* Showcase */
 
-  .showcase{
+  .showcase {
     height: 65vh;
   }
 
@@ -600,22 +519,16 @@ footer #social-media-footer ul li:hover a {
 @media only screen and (max-width: 767px) {
 
   /* Showcase */
-  .showcase{
-    width: 100%!important;
+  .showcase {
+    width: 100% !important;
   }
 
   .showcase-container {
-    padding-right: 0px!important;
-    padding-left: 0px!important;
-    margin-right: 0px!important;
-    margin-left: 0px!important;
-    width: 100%!important;
-  }
-
-  /* Modal */
-  /* 100% Image Width on Smaller Screens */
-  .modal-content {
-    width: 90%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    width: 100% !important;
   }
 
   /* Enquiry */
@@ -637,11 +550,11 @@ footer #social-media-footer ul li:hover a {
   .contact .wpcf7 textarea {
     width: 510px;
   }
-  
+
   .contact-image {
     display: none;
   }
-  
+
   .contact .wpcf7-form p label {
     text-align: left;
   }
@@ -658,7 +571,7 @@ footer #social-media-footer ul li:hover a {
 
   .page-title {
     margin-top: 6vh;
-    margin-bottom: 15px!important;
+    margin-bottom: 15px !important;
     color: #1e1c20;
   }
 
@@ -683,7 +596,7 @@ footer #social-media-footer ul li:hover a {
   #menu-icon {
     display: flex;
   }
-  
+
   #slideout-menu {
     top: 67px;
     display: block;
@@ -692,7 +605,7 @@ footer #social-media-footer ul li:hover a {
   }
 
   #slideout-menu .sub-menu {
-    padding-left: 15px!important;
+    padding-left: 15px !important;
   }
 
   .top-bar {
@@ -705,17 +618,17 @@ footer #social-media-footer ul li:hover a {
     font-weight: bold;
   }
 
-  .top-bar li ul li a  {
+  .top-bar li ul li a {
     text-transform: initial;
   }
 
-  .top-bar li ul li ul li a  {
+  .top-bar li ul li ul li a {
     font-weight: normal;
   }
 
   /* Showcase */
 
-  .showcase{
+  .showcase {
     top: 50px;
     height: 50vh;
   }
@@ -737,14 +650,6 @@ footer #social-media-footer ul li:hover a {
 
   .content-column {
     margin-top: 15px;
-  }
-
-  .modal {
-    padding-top: 120px; /* Location of the box */
-  }
-  
-  .close {
-    top: 70px;
   }
 
   /* Enquiry */
@@ -852,7 +757,7 @@ footer #social-media-footer ul li:hover a {
 
   .contact .wpcf7 input,
   .contact .wpcf7 textarea {
-    max-width: 250px!important;
+    max-width: 250px !important;
   }
 
 }
